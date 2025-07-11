@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+dialog::backdrop
+{
+    
+    @apply backdrop-blur-sm bg-black/30;
+    
+    transition-delay: 2sec;
+    transition-timing-function: ease-in;
+
+    
+
+}
