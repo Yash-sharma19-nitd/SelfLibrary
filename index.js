@@ -1,26 +1,54 @@
-function book(bookid,author,title,page,read)
-{
-    this.id = bookid;
-    this.author = author;
-    this.title=title;
-    this.page=page;
-    if( read == 0)
+// function book(bookid,author,title,page,read)
+// {
+//     this.id = bookid;
+//     this.author = author;
+//     this.title=title;
+//     this.page=page;
+//     if( read == 0)
+//     {
+//         this.read='read';
+//     }
+//     else if( read==1)
+//     {
+//         this.read = 'notread';
+//     }
+//     else if(read==2)
+//     {
+//         this.read = 'reading';
+//     }
+//     this.bookinfo=function()
+//     {
+//         return `The ${this.title} with ${this.author} having pages-${page} and status:${this.read}`;
+//     }
+// }
+
+class book{
+    constructor(bookid,author,title,page,read)
     {
-        this.read='read';
+        this.id= bookid;
+        this.author = author;
+        this.title=title;
+        this.page=page;
+        if(read == 0)
+        {
+            this.read='read';
+        }
+        else if(read==1)
+        {
+            this.read = 'notread';
+        }
+        else if(read==2)
+        {
+            this.read = 'reading';
+        }
     }
-    else if( read==1)
+    bookinfo()
     {
-        this.read = 'notread';
-    }
-    else if(read==2)
-    {
-        this.read = 'reading';
-    }
-    this.bookinfo=function()
-    {
-        return `The ${this.title} with ${this.author} having pages-${page} and status:${this.read}`;
+        return `The ${this.title} with ${this.author} haveing pages-${this.apge} and status:${this.read}`;
+
     }
 }
+
 const dialog=document.getElementById('popup');
 const lib=[];let count =0;
 const shelf=document.getElementById('bookshelf');
@@ -75,7 +103,7 @@ addbook.addEventListener('click',function()
 sub.addEventListener('submit',function(e)
 {
     e.preventDefault();
-    console.log('helloji');
+    // console.log('helloji');
     
     // const read = document.getElementById('read').value;
     // const notread = document.getElementById('notread').value;
