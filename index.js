@@ -163,6 +163,20 @@ sub.addEventListener('submit',function(e)
 })
 }
 
+document.getElementById('listofbooks').addEventListener('click',function(e){
+
+    document.getElementById('listofbooksdialog').showModal();
+    e.preventDefault();
+    document.getElementById('listofbooksul').querySelectorAll('li').forEach((li)=>{
+        li.innerHTML=book.bookinfo();
+    })
+
+}
+)
+document.getElementById('listofbooksdialogclose').addEventListener('click',function(e){
+    document.getElementById('listofbooksdialog').close();
+    // e.preventDefault();
+})
 
 
 

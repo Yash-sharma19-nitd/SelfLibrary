@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>librarypage</title>
-    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
 </head>
 <body>
     <div class="w-screen h-screen overflow-x-hidden bg-yellow-100 flex flex-col gap-5 items-center  backdrop-blur-lg">
-        <h1 class="text-6xl font-sans duration-300 text-center mt-3 hover:underline hover:font-thin cursor-pointer border-4 border-black/20 p-3 rounded-lg">Library</h1>
+        <div class="flex flex-col items-center">
+            <h1 class="text-6xl font-sans duration-300 text-center mt-3 hover:underline hover:font-thin  border-4 border-black/20 p-3 rounded-lg">Library</h1>
+            <button id="listofbooks" type="button" class="border-2 p-1 rounded-lg  font-bold m-2 font-mono hover:text-green-600 hover:bg-white duration-200">List of Books</button>
+        </div>
         <div id="bookshelf" class="w-[98%]  border-2 border-yellow-300 shadow-2xl bg-yellow-50 rounded-lg  grid grid-cols-4 gap-5" >
             <div id="book1" class="border-2 border-black/20 rounded-lg m-5 shadow-2xl bg-white/50 gap-6 flex flex-col">
                 <div id="upperhalf" class="flex flex-col w-full">
@@ -95,8 +98,21 @@
             </form>
         </div>  
         </dialog>
+        <dialog id="listofbooksdialog" class="w-1/2 h-1/2 cursor-pointer border-4 p-1 bg-yellow-200 border-yellow-900 rounded-lg">
+            <div class="flex flex-col justify-center items-center w-full h-full ">
+                <h1 class="text-2xl text-white font-mono border-2 p-2 bg-black rounded-lg">list of books</h1>
+                <div class="w-full h-full overflow-y-auto">
+                    <ul id="listofbooksul" class="flex flex-col gap-2 p-2">
+                        <li class="border-2 border-black/20 rounded-lg p-2 bg-white/50"></li>
+                    </ul>
+                    
+                </div>
+                <div><button type="button" id="listofbooksdialogclose" class="border-2 rounded-md text-sm bg-white p-2">close</button></div>
+            </div>
+            
+        </dialog>
 
 
-    </div>
+    </divclass>
 </body>
 </html>
